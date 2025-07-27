@@ -9,8 +9,5 @@ pkgs.stdenv.mkDerivation {
     hash = "sha256-HDj4h0da3J8PyzBoDbfNDBW+QRafUyjmYpzdj5dJB6A=";
   };
 
-  installPhase = ''
-    mkdir -p $out
-    cp -r 1920x1080/* $out/
-  '';
+  installPhase = "cp -r 1920x1080 $out";
 }

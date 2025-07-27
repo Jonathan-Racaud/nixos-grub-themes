@@ -6,7 +6,11 @@ pkgs.stdenv.mkDerivation {
     owner = "callmenoodles";
     repo = "space-isolation";
     rev = "v0.2.0";
-    #hash = "f6a11eb7edb22ba3959b944d68224f2f6f892457";
+    hash = "sha256-HDj4h0da3J8PyzBoDbfNDBW+QRafUyjmYpzdj5dJB6A=";
   };
-  installPhase = "cp -r 1920x1080 $out";
+
+  installPhase = ''
+    mkdir -p $out
+    cp -r 1920x1080/* $out/
+  '';
 }
